@@ -30,7 +30,7 @@ export default function() {
   this.get('/expences', function() {
     return {
       data: [{
-        type: 'action',
+        type: 'expence',
         attributes: {
           section: '食費',
           amount: 100,
@@ -45,7 +45,7 @@ export default function() {
         },
         id: '1'
       },{
-        type: 'action',
+        type: 'expence',
         attributes: {
           section: '食費',
           amount: 100,
