@@ -5,6 +5,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    emberCliFontAwesome: {
+      useScss: true
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -14,6 +17,7 @@ module.exports = function(defaults) {
   // environments, specify an object as the first parameter. That
   // object's keys should be the environment name and the values
   // should be the asset to use in that environment.
+  app.import('bower_components/HTML5-Reset/assets/css/reset.css');
   //
   // If the library that you are including contains AMD or ES6
   // modules that you would like to import into your application

@@ -1,0 +1,127 @@
+<form id="input-record" {{action "addExpence" on="submit"}}>
+    <div id="page-input-record" class="page-container active">
+    <!--<header class="header">
+        <h1 class="title">
+        <span class="fa fa-book">
+            <label class="label" for="account">家計簿</label>
+        </span>
+        <select class="title-select" id="account" name="account">
+            <option selected value="537f78a6-e5bb-38a7-7996-93a88bf61541">家計簿1</option>
+            <option>家計簿2</option>
+        </select>
+        </h1>
+        <button type="button" class="btn-left fa fa-clock-o page-open" data-target="page-show-records"></button>
+        <button type="button" class="btn-right fa fa-bars" onClick=""></button>
+    </header>-->
+    <div class="body">
+        <div class="box-input">
+        <span class="fa fa-calendar">
+            <label class="label" for="date">日付</label>
+        </span>
+        {{input type="date" id="date" name="date"}}
+        </div>
+        <div class="box-input">
+        <span class="fa fa-folder">
+            <label class="label" for="section">費目</label>
+        </span>
+        <button type="button" class="half" id="section" name="section">費用1</button>
+        <span class="fa fa-angle-right">
+            <label class="label" for="subsection">内訳</label>
+        </span>
+        <button type="button" class="half" id="subsection" name="subsection">内訳1</button>
+        </div>
+        <div class="box-input">
+        <span class="fa fa-jpy">
+            <label class="label" for="amount">費用</label>
+        </span>
+        {{input type="number" id="amount" name="amount" placeholder="費用"}}
+        </div>
+        <div class="box-input">
+        <span class="fa fa-file-text-o">
+            <label class="label" for="detail">詳細</label>
+        </span>
+        {{input type="text" id="detail" name="detail"placeholder="詳細"}}
+        </div>
+
+
+        <div class="box-input hidden">
+        <label for="shop">お店</label>
+        <p>{{input type="text" id="shop" name="shop"}}</p>
+        </div>
+        <div class="box-input hidden">
+        <label for="way">取扱</label>
+        <select id="way" name="way"></select>
+        </div>
+        <div class="box-input hidden">
+        <label for="debitDay">引き落とし日</label>
+        {{input type="date" id="debitDay" name="debitDay"}}
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="box-submit">
+        {{input type="hidden" name="isIncome" value="0"}}
+        <button type="submit" class="btn-submit">
+            <span class="fa fa-pencil"></span>
+            入力する
+        </button>
+        </div>
+    </footer>
+    </div>
+</form>
+
+<div id="modal-select-section" class="modal page-container">
+    <header class="header">
+    <h1 class="title">費目選択</h1>
+        <button type="button" class="btn-right fa fa-times modal-close"></button>
+    </header>
+    <div class="body">
+    <ul id="section-list" class="section-list">
+        <li class="selectable">
+        <span class="section-list-icon fa fa-cutlery"></span>
+        食費
+        </li>
+    </ul>
+    <ul class="section-type">
+        <li >
+        <span class="section-type-icon fa fa-cutlery"></span>
+        支出
+        </li>
+        <li >
+        <span class="section-type-icon fa fa-cutlery"></span>
+        収入
+        </li>
+    </ul>
+    </div>
+</div>
+<div id="modal-select-subsection" class="modal page-container">
+    <header class="header">
+    <h1 class="title">内訳選択</h1>
+        <button type="button" class="btn-right fa fa-times modal-close"></button>
+    </header>
+    <div class="body">
+    <ul id="subsection-list" class="section-list">
+        <li class="selectable">
+        <span class="section-list-icon fa fa-cutlery"></span>
+        食費
+        </li>
+    </ul>
+    </div>
+</div>
+<div id="page-show-records" class="page-container">
+    <header class="header">
+    <h1 class="title">
+        履歴
+    </h1>
+    <button type="button" class="btn-left fa fa-chevron-left page-back"></button>
+    </header>
+    <div class="body">
+    <ul id="records" class="section-list">
+        <li class="selectable">
+        <span class="record-date"></span>
+        <span class="record-section"></span>
+        <span class="record-subsection"></span>
+        <span class="record-amount"></span>
+        </li>
+    </ul>
+    </div>
+</div>

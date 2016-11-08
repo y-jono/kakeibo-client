@@ -1,0 +1,31 @@
+{{outlet}}
+<div id="page-show-records" class="page-container active">
+<table>
+    <!-- TODO:日付でブレイクする-->
+    <!--<td> {{action.date}} </td>-->
+    <tr>
+        <th>費目</th>
+        <th>金額</th>
+        <th>内訳</th>
+        <th>詳細</th>
+        <th>アカウント</th>
+        <th>支払方法</th>
+        <th></th>
+        <th>引き落とし日</th>
+        <th>お店</th>
+    </tr>
+{{#each model as |action| }}
+    <tr>
+        <td> {{action.section}} </td>
+        <td> {{action.amount}} </td>
+        <td> {{action.subsection}} </td>
+        <td> {{action.detail}} </td>
+        <td> {{action.account}} </td>
+        <td> {{action.way}} </td>
+        <td> {{action.isIncome}} </td>
+        <td> {{action.debitDay}} </td>
+        <td> {{action.shop}} </td>
+    </tr>
+{{/each}}
+</table>
+</div>

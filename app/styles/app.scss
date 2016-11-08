@@ -1,0 +1,296 @@
+/* 要素タグの調整 */
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+
+input,
+select,
+button {
+  font-family: sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+  background-color: #fff;
+  color: #888;
+  font-size: 1.2em;
+  padding: 0 10px;
+  line-height: 2em;
+  height: 2em;
+}
+
+input[submit],
+input[button],
+button {
+  border-color: rgba(0, 0, 0, 0.5);
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 1px #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
+  padding: 0 20px;
+  line-height: 3em;
+  height: 3em;
+}
+
+input:focus,
+select:focus,
+button:focus  {
+  outline: none;
+}
+
+
+
+/* ページ枠のクラス */
+
+.page-container {
+  display: none;
+}
+
+.page-container.active {
+  display: block;
+}
+
+.page-container .header {
+  position: relative;
+  background: #1d9d74;
+}
+
+.page-container > .header .title {
+  text-align: center;
+  padding: 15px 20%;
+  line-height: 1.1em;
+  color: #fff;
+  font-weight: normal;
+}
+
+.page-container > .header .title-select {
+  text-align: center;
+  height: 1.5em;
+  margin: -0.7em 0 -0.3em;
+  padding: 0;
+  line-height: 1em;
+  color: inherit;
+  font-weight: normal;
+  border: none;
+  font-size: 1em;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.page-container > .header .fa + .title-select {
+  margin-left: -0.5em;
+}
+
+.page-container > .header .btn-left,
+.page-container > .header .btn-right {
+  position: absolute;
+  top: 8px;
+  border-color: #fff;
+  background-color: #fff;
+  color: #aaa;
+  font-size: 1em;
+}
+
+.page-container > .header .btn-left.fa,
+.page-container > .header .btn-right.fa {
+  border-color: transparent;
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 15px 12px;
+  top: 0;
+  height: 100%;
+  border-radius: 0;
+}
+
+.page-container > .header .btn-left {
+  left: 0;
+}
+.page-container > .header .btn-right {
+  right: 0;
+}
+.page-container .body {
+  padding: 15px;
+  background-color: #f5f5f5;
+}
+
+/* .page-container.modal */
+
+.page-container.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.page-container.modal.active {
+  animation: show 0.1s linear 0s;
+}
+
+.page-container.modal .header {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  height: 50px;
+}
+.page-container.modal .body {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  margin-top: 50px;
+  overflow: auto;
+}
+
+
+/* よく使うクラス */
+
+.fa .label{
+  font-size: 0;
+}
+
+.box-input {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+  background-color: #fff;
+  color: #888;
+  font-size: 1.2em;
+  padding: 0 10px;
+  line-height: 2.5em;
+  overflow: hidden;;
+  margin: 0.5em 0;
+}
+
+.box-input .fa {
+  color: #1d9d74;
+  font-size: 1.2em;
+  text-align: center;
+  width: 1.3em;
+}
+
+.box-input input,
+.box-input select {
+  float: right;
+  box-shadow: none;
+  background-color: transparent;
+  color: #888;
+  font-size: 1em;
+  height: 2.5em;
+  line-height: 2.5em;
+  width: calc(100% - 2em);
+  padding: 0;
+  margin: 0;
+}
+
+.box-input button {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: transparent;
+  font-size: 0.9em;
+  color: #888;
+  padding: 0;
+}
+
+.box-submit {
+  padding: 15px;
+}
+.box-submit .btn-submit {
+  display: block;
+  width: 100%;
+  background-color: #1d9d74;
+  color: #fff;
+}
+
+/* #page-select-section */
+
+.section-list {
+  margin: -15px -15px 0;
+  list-style: none;
+}
+
+.section-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+  color: #444;
+}
+
+.section-list li:hover {
+  background-color: #eee;
+}
+
+
+.section-list li .section-list-icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 2em;
+  margin-right: 5px;
+  background-color: #ddd;
+  font-size: 1.2em;
+}
+
+
+/* #page-input-record */
+
+/*.p-input {
+  line-height: 2.5em;
+}
+
+.box-input label {
+  display: inline-block;
+  width: 20%;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.box-input input {
+  width: 70%;
+  vertical-align: middle;
+}
+.box-input select {
+  width: 75%;
+  vertical-align: middle;
+}
+
+.box-submit {
+  padding: 20px 0 10px;
+}
+.btn-submit {
+  display: block;
+  width: 100%;
+  line-height: 2.0em;
+}*/
+
+/*-----*/
+
+.hidden {
+  display: none !important;
+}
+.hide-text {
+  font-size: 0;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
