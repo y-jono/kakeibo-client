@@ -28,9 +28,10 @@ export default function() {
 
   // TODO: 日付	費目	内訳	収支	詳細	取扱	引落日	店名
   this.get('/expences', function() {
-    return {
-      data: [{
+    return { data: [
+      {
         type: 'expence',
+        id: '1',
         attributes: {
           section: '食費',
           amount: 100,
@@ -40,12 +41,13 @@ export default function() {
           account: '1',
           way: '1',
           isIncome: 1,
-          debitDay: '1',
+          debitDay: '2016-09-09',
           shop: '1'
         },
-        id: '1'
-      },{
+      },
+      {
         type: 'expence',
+        id: '2',
         attributes: {
           section: '食費',
           amount: 100,
@@ -55,14 +57,10 @@ export default function() {
           account: '1',
           way: '1',
           isIncome: 1,
-          debitDay: '1',
+          debitDay: '2016-09-09',
           shop: '1'
         },
-        id: '2'
-      }]
-    };
-    
+      }
+      ]};    
   });
-
 }
-
